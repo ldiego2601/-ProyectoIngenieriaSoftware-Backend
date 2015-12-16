@@ -7,6 +7,7 @@ function REST_ROUTER(router,connection) {
 
 REST_ROUTER.prototype.handleRoutes= function(router,connection) {
     router.get("/",function(req,res){
+      console.log(req.ip);
       res.json({"Message" : "Hello World !"});
     })
 }
