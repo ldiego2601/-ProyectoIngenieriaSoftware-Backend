@@ -4,12 +4,13 @@ var config = {
     user: 'SA',
     password: 'Proyecto2015',
     server: 'localhost\\DEVELOPMENT', // You can use 'localhost\\instance' to connect to named instance
-    database: 'restful_test',
+    database: 'SistemaAdministracionDatosCargaAcademica',
 }
 var connection = new mssql.Connection(config); //cp = connection pool
 var bodyParser  = require("body-parser");
 var rest = require("./routes/rest_api.js");
 var test = require("./routes/test.js");
+var test = require("./routes/plan_estudio.js");
 var app  = express();
 
 function REST(){
