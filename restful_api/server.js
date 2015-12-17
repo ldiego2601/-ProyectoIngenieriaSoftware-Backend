@@ -10,8 +10,8 @@ var connection = new mssql.Connection(config); //cp = connection pool
 var bodyParser  = require("body-parser");
 var rest = require("./routes/rest_api.js");
 var test = require("./routes/test.js");
-var test = require("./routes/plan_estudio.js");
-var test = require("./routes/sede.js");
+var plan_estudio = require("./routes/plan_estudio.js");
+var sede = require("./routes/sede.js");
 var app  = express();
 
 function REST(){
@@ -37,6 +37,8 @@ REST.prototype.configureExpress = function(connection) {
       app.use('/', router);
       var rest_router = new rest(router,connection);
       var test_router = new test(router,connection);
+      var plan_estudio_router = new plan_estudio(router,connection);
+      var sede_router = new sede(router,connection);
       self.startServer();
 }
 
