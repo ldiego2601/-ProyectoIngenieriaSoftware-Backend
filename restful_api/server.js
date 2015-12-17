@@ -11,6 +11,7 @@ var bodyParser  = require("body-parser");
 var rest = require("./routes/rest_api.js");
 var test = require("./routes/test.js");
 var test = require("./routes/plan_estudio.js");
+var test = require("./routes/sede.js");
 var app  = express();
 
 function REST(){
