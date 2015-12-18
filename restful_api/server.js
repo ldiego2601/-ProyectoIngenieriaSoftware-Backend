@@ -14,6 +14,7 @@ var plan_estudio = require("./routes/plan_estudio.js");
 var sede = require("./routes/sede.js");
 var jornada_laboral = require("./routes/jornada_laboral.js");
 var curso = require("./routes/curso.js");
+var franja_horaria = require("./routes/franja_horaria.js");
 var app  = express();
 
 function REST(){
@@ -43,6 +44,7 @@ REST.prototype.configureExpress = function(connection) {
       var sede_router = new sede(router,connection);
       var jornada_laboral_router = new jornada_laboral(router,connection);
       var curso_router = new curso(router,connection);
+      var franja_horaria_router = new franja_horaria(router,connection);
       self.startServer();
 }
 
